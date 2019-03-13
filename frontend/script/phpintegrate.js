@@ -25,7 +25,14 @@ function contentOnServer(request, content, parameter, location)
         if(this.readyState == 4)
         {
             if(this.status == 200)
-               location.innerHTML = this.responseText;
+                try
+                {
+                    location.innerHTML = this.responseText;
+                }
+                catch(exception)
+                {
+                    console.warn(exception);
+                }
 
             if(this.status == 404)
                 console.warn("File not found!");
@@ -38,7 +45,5 @@ function contentOnServer(request, content, parameter, location)
 
 function setHeight()
 {
-    content.style.height = document.documentElement.clientHeight; 
-
-    console.log(content.clientHeight);
+    content.style.height = window.innerHeight;
 }
