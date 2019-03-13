@@ -39,5 +39,6 @@ function contentOnServer(request, content, parameter, location)
 function setHeight()
 {
     content.style.height = document.documentElement.clientHeight; 
+
     console.log(content.clientHeight);
 }

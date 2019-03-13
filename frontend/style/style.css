@@ -2,11 +2,6 @@
     display: none; 
 }
 
-body{
-    position: relative;
-    margin: 0;
-}
-
 div{
     z-index: 0;
 }
@@ -74,13 +69,4 @@ div#content:hover button{
 p{
     font-family: "Times New Roman", Times, serif;
     color: white;
-}
-
-video#bgVideo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: -1;
 }
