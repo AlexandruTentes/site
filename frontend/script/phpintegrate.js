@@ -45,5 +45,5 @@ function contentOnServer(request, content, parameter, location)
 
 function setHeight()
 {
-    content.style.height = window.innerHeight;
+    //content.style.height = window.innerHeight;
 }
