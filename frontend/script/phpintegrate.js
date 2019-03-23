@@ -2,20 +2,6 @@ const xHttpReq = new XMLHttpRequest();
 
 let dynamicContent = ["header", "footer"];
 
-window.onload = function()
-{
-    const header = document.getElementById("header");
-    const content = document.getElementById("content");
-    const footer = document.getElementById("footer");
-
-    dynamicContent.forEach(function(page)
-    {
-        contentOnServer('get', (page + ".html"), 
-                        null, document.getElementById(page));
-    });
-    setHeight();
-}
-
 function contentOnServer(request, content, parameter, location)
 {
     xHttpReq.open(request , content, false);
@@ -43,7 +29,15 @@ function contentOnServer(request, content, parameter, location)
     xHttpReq.send(parameter);
 }
 
-function setHeight()
+window.onload = function()
 {
-    //content.style.height = window.innerHeight;
+    const header = document.getElementById("header");
+    const content = document.getElementById("content");
+    const footer = document.getElementById("footer");
+
+    dynamicContent.forEach(function(page)
+    {
+        contentOnServer('get', (page + ".html"), 
+                        null, document.getElementById(page));
+    });
 }

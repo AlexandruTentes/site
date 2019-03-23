@@ -4,8 +4,8 @@ const eachPic = document.getElementsByClassName("click");
 
 let eachPic_src;
 
-handler = function(event)
-{console.log("kek");
+handler_show_pic = function(event)
+{
     if(event.target.className == "click")
     {
         eachPic_src = event.target.src;
@@ -14,12 +14,12 @@ handler = function(event)
     }
 }
 
-
-pictures.addEventListener("click", handler);
-
-image[0].addEventListener("click", function(event)
+handler_close_pic = function(event)
 {
     if(event.target.className == "overlay_image" 
        || event.target.className == "click")
-        image[0].style.display = "none";
-});
+            image[0].style.display = "none";
+}
+
+pictures.addEventListener("click", handler_show_pic);
+image[0].addEventListener("click", handler_close_pic);

@@ -13,19 +13,18 @@ div#header{
     border-bottom: 2px solid #022A5A;
 }
 
-div#footer{
-    width: 100%;
-    height: 100px;
-    background-color: 	#033B74;
-    border-top: 2px solid #022A5A;
-}
-
 div#line{
     width: 100%;
-    height: 100px;
-    background-color: 	#033B74;
-    border-top: 2px solid #022A5A;
-    border-bottom: 2px solid #022A5A;
+    height: 5vw;
+    background-color: 	#525252;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    box-shadow: -5px -10px 30px 20px #313131 inset;
+}
+
+div#line > *{
+    font-size:2vw;
+    text-shadow:-1px 0 #393e46, 0 1px #393e46, 1px 0 #393e46, 0 -1px #393e46;
 }
 
 div#content{
@@ -110,7 +109,9 @@ div#content:hover div#menu{
 
 p{
     font-family: "Times New Roman", Times, serif;
-    color: white;
+    color: #ec625f;
+    opacity: 0.7;
+    margin-bottom: 0;
 }
 
 div#pictures{
